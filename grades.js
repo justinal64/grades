@@ -72,7 +72,7 @@ switch(true) {
     grade.highest = highest;
 }
 console.log(grade);
-// console.log(highest);
-// console.log(lowest);
+console.log("This is the highest number: ", highest);
+console.log("This is the lowest number: ", lowest);
 
 
