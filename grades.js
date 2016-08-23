@@ -21,44 +21,23 @@ var highest = 0;
 
 for (var i = 0; i < scores.length; i++) {
 
-switch(true) {
-    case (scores[i] < lowest):
-        lowest = scores[i]
+    if(scores[i] <= 60) {
+        if(scores[i] < lowest) {
+            lowest = scores[i];
+        }
         f++;
-        break;
-    case (scores[i]<= 70):
+    } else if(scores[i] <= 70) {
         d++;
-        break;
-    case (scores[i]<= 80):
+    } else if(scores[i] <= 80) {
         c++;
-        break;
-    case (scores[i]<= 90):
+    } else if(scores[i] <= 90) {
         b++;
-        break;
-    case (scores[i] > highest):
-        highest = scores[i];
+    } else {
+        if(scores[i] > highest) {
+            highest = scores[i];
+        }
         a++;
-        break;
-    default:
-}
-
-    // if(scores[i] <= 60) {
-    //     if(scores[i] < lowest) {
-    //         lowest = scores[i];
-    //     }
-    //     f++;
-    // } else if(scores[i] <= 70) {
-    //     d++;
-    // } else if(scores[i] <= 80) {
-    //     c++;
-    // } else if(scores[i] <= 90) {
-    //     b++;
-    // } else {
-    //     if(scores[i] > highest) {
-    //         highest = scores[i];
-    //     }
-    //     a++;
-    // }
+    }
 
     // Task 1
     grade.f = f;
